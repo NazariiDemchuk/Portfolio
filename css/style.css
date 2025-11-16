@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    list-style-type: none;
     text-decoration: none;
     font-style: normal;
     font-weight: normal;
@@ -50,9 +49,9 @@ header {
     z-index: 10;
 }
 
-header  img {
-    width: 58px;
-    height: 48px;
+header img {
+    width: 55px;
+    height: 45px;
 }
 
 .burger-toggle,
@@ -60,7 +59,7 @@ header  img {
     display: none;
 }
 
-nav {
+nav ul {
     display: flex;
     align-items: center;
     gap: 77px;
@@ -75,8 +74,10 @@ nav {
 }
 
 .nav-item  a {
-    font-size: 16px;
+    font-size: 22px;
     transition: 0.2s;
+    padding: 30px;
+    will-change: transform;
 }
 
 .nav-item a:hover {
@@ -125,6 +126,17 @@ nav {
     z-index: -1;
 }
 
+.video_bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 .video_bg video {
     width: 100%;
     height: 100%;
@@ -154,7 +166,8 @@ nav {
     margin: 20px;
 }
 
-.hero_info button {
+.hero_btn {
+    display: inline-block;
     padding: 7px 14px;
     background: var(--color3);
     border-radius: 7px;
@@ -165,7 +178,7 @@ nav {
     transition: 0.3s;
 }
 
-.hero_info button:hover {
+.hero_btn:hover {
     background: var(--color2);
     color: var(--color1);
     border: 3px solid var(--color1);
@@ -189,7 +202,7 @@ nav {
     overflow: hidden;
 }
 
-.about_info::after {
+.about_img::after {
     content: "";
     position: absolute;
     top: 10px;
@@ -199,6 +212,7 @@ nav {
     background: var(--color3);
     border-radius: 50%;
     opacity: 0.3;
+    z-index: 1;
 }
 
 .about_i {
@@ -206,15 +220,17 @@ nav {
     height: 600px;
     border-radius: 10px;
     position: relative;
+    z-index: 0;
 }
 
 .about_icon {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 25px;
+    left: 15px;
     width: 100px;
-    height: 100px;
+    height: 80px;
     opacity: 0.75;
+    z-index: 2;
 }
 
 .about_text {
@@ -291,12 +307,8 @@ nav {
     color: var(--color3);
 }
 
-.about_cert ol {
+.about_cert ul {
     margin-left: 16px;
-}
-
-.about_cert li {
-    list-style-type: disc;
 }
 
 .about_cert a {
@@ -354,7 +366,7 @@ nav {
     margin-top: 10px;
 }
 
-.project_info button {
+.project_info a {
     padding: 5px 21px;
     background: var(--color2);
     border-radius: 7px;
@@ -365,7 +377,7 @@ nav {
     border: 3px solid var(--color2);
 }
 
-.project_info button:hover {
+.project_info a:hover {
     background: var(--color1);
     color: var(--color2);
     transform: scale(1.1);
@@ -416,7 +428,9 @@ nav {
     border-radius: 7px;
     padding: 14px;
     border: 3px solid var(--color1);
-    
+    max-width: 380px;
+    min-width: 380px;
+    min-height: 51.2px;
 }
 
 .contact_field input::placeholder, 
@@ -485,7 +499,7 @@ footer {
     gap: 20px;
 }
 
-.footer_sm  button {
+.footer_sm a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,9 +510,11 @@ footer {
     padding: 20px;
     cursor: pointer;
     transition: 0.2s;
+    position: relative; 
+    overflow: hidden;
 }
 
-.footer_sm button:active {
+.footer_sm a:active {
     transform: scale(0.9);
 }
 
@@ -506,21 +522,39 @@ footer {
     background: rgb(46, 46, 255);
 }
 
-.instagram:hover {
+.instagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(45deg, yellow 0%, orange 25%, red 50%, purple 75%, pink 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease; 
+    z-index: 0;
+}
+
+.instagram:hover::before {
+    opacity: 1;
+}
+
+.instagram img {
+    position: relative;
+    z-index: 1; 
 }
 
 .telegram:hover {
     background: rgb(2, 183, 255);
 }
 
-.footer_sm  button img {
+.footer_sm  a img {
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
 }
 
-.footer_sm button:hover img {
+.footer_sm a:hover img {
     transform: scale(1.3);
 }
 
@@ -575,7 +609,7 @@ footer {
         height: 42px;
     }
 
-    nav {
+    nav ul {
         gap: 40px;
     }
 
@@ -585,7 +619,7 @@ footer {
     }
 
     .nav-item a {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .hd_button {
@@ -617,19 +651,19 @@ footer {
         padding: 30px;
     }
 
-    .about_info::after {
-        width: 80px;
+    .about_img::after {
+        width: 20%;
         height: 80px;
-        top: 20px;
-        left: auto;
-        right: 50%;
-        margin-right: 160px;
+        top: -2%;
+        left: -7%;
     }
 
     .about_img {
         display: flex;
         justify-content: center;
         position: relative;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .about_i {
@@ -639,13 +673,11 @@ footer {
     }
 
     .about_icon {
-        position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: -200px;
-        width: 60px;
-        height: 60px;
+        left: -5%;
+        margin-left: 0;
+        width: 15%;
+        height: auto;
     }
 
     .about_text {
@@ -730,6 +762,12 @@ footer {
     .contact_field {
         width: 100%;
         max-width: 600px;
+    }
+
+    .contact_field input, textarea {
+        max-width: 580px;
+        min-width: 580px;
+        min-height: 51.2px;
     }
 
     .contact_field button {
@@ -830,9 +868,19 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 20px;
         order: 3;
         transition: max-height 0.4s ease, padding 0.4s ease;
+        padding: 0;
+    }
+
+    nav ul {
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+     .nav-item a {
         padding: 0;
     }
 
@@ -876,7 +924,7 @@ footer {
         margin: 10px 0;
     }
 
-    .hero_info button {
+    .hero_btn {
         padding: 8px 16px;
         font-size: 14px;
     }
@@ -889,19 +937,22 @@ footer {
         padding: 20px;
     }
 
-    .about_info::after {
-        width: 60px;
-        height: 60px;
-        top: 10px;
-        right: 50%;
+    .about_img::after {
+        width: 20%;
+        height: 15%;
+        top: 0;
+        right: 41%;
         left: auto;
-        margin-right: 120px;
+        margin-right: 40%;
     }
 
     .about_img {
         display: flex;
         justify-content: center;
         position: relative;
+        max-width: 300px;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .about_i {
@@ -909,16 +960,15 @@ footer {
         max-width: 300px;
         height: auto;
         aspect-ratio: 3/4;
+        left: auto;
     }
 
     .about_icon {
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: -150px;
-        width: 50px;
-        height: 50px;
+        top: 2%;
+        left: 0;
+        margin-left: 0;
+        width: 16.7%;
+        height: auto;
     }
 
     .about_text {
@@ -1006,7 +1056,7 @@ footer {
         margin-top: 8px;
     }
 
-    .project_info button {
+    .project_info a {
         padding: 5px 18px;
         font-size: 14px;
         margin-top: 8px;
@@ -1044,6 +1094,9 @@ footer {
     .contact_field textarea {
         padding: 12px;
         font-size: 14px;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 51.2px;
     }
 
     .contact_field button {
@@ -1085,7 +1138,7 @@ footer {
         padding: 18px;
     }
 
-    .footer_sm button img {
+    .footer_sm a img {
         width: 25px;
         height: 25px;
     }
@@ -1105,29 +1158,11 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    .nav {
+    nav ul {
         gap: 15px;
     }
 
     .nav-item a {
-        font-size: 13px;
-    }
-
-    .about_info::after {
-        width: 60px;
-        height: 60px;
-        top: 10px;
-        right: 50%;
-        left: auto;
-        margin-right: 70px;
-    }
-    .about_icon {
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: -100px;
-        width: 50px;
-        height: 50px;
+        font-size: 16px;
     }
 }

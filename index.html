@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./assets/images/icon.png">
+    <link rel="icon" href="./assets/images/icon.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
@@ -12,7 +12,9 @@
 </head>
 <body>
     <header>
-        <img src="./assets/images/icon.png" alt="icon">
+        <a href="">
+            <img src="./assets/images/icon.webp" alt="icon">
+        </a>
         <input type="checkbox" id="burger-toggle" class="burger-toggle">
             <label for="burger-toggle" class="burger-menu">
                 <span></span>
@@ -20,18 +22,20 @@
                 <span></span>
             </label>
         <nav>
-            <p class="nav-item">
-                <a href="#home">Home</a>
-            </p>
-            <p class="nav-item">
-                <a href="#about">About</a>
-            </p>
-            <p class="nav-item">
-                <a href="#project">Projects</a>
-            </p>
-            <p class="nav-item">
-                <a href="#contact">Contact</a>
-            </p>
+            <ul>
+                <li class="nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#project">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
         </nav>
         <button class="hd_button">Hire Me</button>
     </header>
@@ -39,6 +43,7 @@
         <section class="hero" id="home">
             <div class="video_bg">
                 <video autoplay muted loop playsinline>
+                    <source src="./assets/video/I.webm" type="video/webm">
                     <source src="./assets/video/I.mp4" type="video/mp4">
                 </video>
             </div>
@@ -46,14 +51,14 @@
                 <h1>Hello, everyone! My name is Nazarii</h1>
                 <h2>I am a student from Ukrain, studying at SUICT, specialising in front-end development</h2>
                 <p>This website is my personal portfolio, where I will tell you about myself and what I can do</p>
-                <button>Viev Projects</button>
+                <a class="hero_btn" href="#project">Viev Projects</a>
             </div>
         </section>
         <section class="about" id="about">
             <div class="about_info">
                 <div class="about_img">
-                    <img class="about_i" src="./assets/images/I.jpg" alt="I">
-                    <img class="about_icon" src="./assets/images/icon.png" alt="Icon">
+                    <img class="about_i" src="./assets/images/I.webp" alt="I">
+                    <img class="about_icon" src="./assets/images/icon.webp" alt="Icon">
                 </div>
                 <div class="about_text">
                     <div class="about_me">
@@ -73,7 +78,7 @@
                     </div>
                     <div class="about_cert">
                         <h3>Certificates</h3>
-                        <ol>
+                        <ul>
                             <li>
                                 <a href="./assets/files/Hillel Front-End Basic.pdf" target="_blank">
                                     Hillel Front-End Basic
@@ -89,7 +94,7 @@
                                     CISCO IT Essentials
                                 </a>
                             </li>
-                        </ol>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -98,40 +103,40 @@
             <h2>my projects</h2>
             <div class="project_container">
                 <div class="project_info">
-                    <img src="./assets/images/Project1.png" alt="">
+                    <img src="./assets/images/Project1.webp" alt="">
                     <p>UpDate</p>
-                    <button onclick="window.open('https://nazariidemchuk.github.io/front-end-start/')">
+                    <a href="https://nazariidemchuk.github.io/front-end-start/" target="_blank">
                         View
-                    </button>
+                    </a>
                 </div>
                 <div class="project_info">
-                    <img src="./assets/images/Project2.png" alt="">
+                    <img src="./assets/images/Project2.webp" alt="">
                     <p>Vision Capital</p>
-                    <button onclick="window.open('https://nazariidemchuk.github.io/Front-End-University/')">
+                    <a href="https://nazariidemchuk.github.io/Front-End-University/" target="_blank">
                         View
-                    </button>
+                    </a>
                 </div>
                 <div class="project_info">
-                    <img src="./assets/images/Project3.png" alt="">
+                    <img src="./assets/images/Project3.webp" alt="">
                     <p>GREENSHOP</p>
-                    <button onclick="window.open('https://nazariidemchuk.github.io/Front-End-Basic/')">
+                    <a href="https://nazariidemchuk.github.io/Front-End-Basic/" target="_blank">
                         View
-                    </button>
+                    </a>
                 </div>
                 <div class="project_info">
-                    <img src="./assets/images/Project4.png" alt="">
+                    <img src="./assets/images/Project4.webp" alt="">
                     <p>hlegal</p>
-                    <button>View</button>
+                    <a>View</a>
                 </div>
                 <div class="project_info">
-                    <img src="./assets/images/Project5.png" alt="">
+                    <img src="./assets/images/Project5.webp" alt="">
                     <p>BUSINESS</p>
-                    <button>View</button>
+                    <a>View</a>
                 </div>
                 <div class="project_info">
-                    <img src="./assets/images/Project6.png" alt="">
+                    <img src="./assets/images/Project6.webp" alt="">
                     <p>TRAVEL AGENCY</p>
-                    <button>View</button>
+                    <a>View</a>
                 </div>
             </div>
         </section>
@@ -152,7 +157,7 @@
     </main>
     <footer>
         <div class="footer_container">
-            <img src="./assets/images/icon.png" alt="Icon">
+            <img src="./assets/images/icon.webp" alt="Icon">
             <div class="footer_contact">
                 <p>
                     <span>Tel:</span>
@@ -164,18 +169,18 @@
                 </p>
             </div>
             <div class="footer_sm">
-                <button class="linkedin" onclick="window.open('https://www.linkedin.com/in/nazarii-demchuk-915570375/')">
-                    <img src="./assets/images/linkedin.png" alt="linkedin">
-                </button>
-                <button class="instagram" onclick="window.open('https://www.instagram.com/demchuk.st/')">
-                    <img src="./assets/images/instagram.png" alt="instagram">
-                </button>
-                <button class="telegram" onclick="window.open('https://t.me/Stanochok')">
-                    <img src="./assets/images/telegram.png" alt="telegram">
-                </button>
-                <button class="github" onclick="window.open('https://github.com/NazariiDemchuk')">
-                    <img src="./assets/images/github.png" alt="">
-                </button>
+                <a class="linkedin" href="https://www.linkedin.com/in/nazarii-demchuk-915570375/" target="_blank">
+                    <img src="./assets/images/linkedin.webp" alt="linkedin">
+                </a>
+                <a class="instagram" href="https://www.instagram.com/demchuk.st/" target="_blank">
+                    <img src="./assets/images/instagram.webp" alt="instagram">
+                </a>
+                <a class="telegram" href="https://t.me/Stanochok" target="_blank">
+                    <img src="./assets/images/telegram.webp" alt="telegram">
+                </a>
+                <a class="github" href="https://github.com/NazariiDemchuk" target="_blank">
+                    <img src="./assets/images/github.webp" alt="">
+                </a>
             </div>
         </div>
         <div class="footer_end">

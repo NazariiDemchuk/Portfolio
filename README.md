@@ -1,80 +1,47 @@
-HTML5
+# Portfolio | Nazarii Demchuk
 
-<header>, <main>, <section>, <footer> - семантичні теги для правильної структури документа
-<nav> - навігаційне меню
-<video> з атрибутами autoplay, muted, loop, playsinline - фонове відео
-alt - атрибут для зображень
-id та href - навігація для сторінки
+This is a personal portfolio website for Nazarii Demchuk, a Frontend Developer. The website showcases projects, provides information about the developer, and includes a contact form for potential clients or collaborators.
 
-Google Fonts
-<link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap"> - кастомний шрифт
+## 🌐 View
 
-CSS3
+```bash
+https://nazariidemchuk.github.io/Portfolio/
+```
 
-* {...} - скидання стандартних стилів браузера
-:root {...} - змінні для кольорів та відступів
+## 🚀 Features
+- Responsive layout for desktop, tablet, and mobile devices
+- Hero section with introduction and call-to-action button
+- About section with profile image and description
+- Projects section with cards and project previews
+- Contact form for sending messages
+- Footer with social media links
+- Scroll-to-top button for easy navigation
 
-Flexbox
-display: flex - розташування елементів
-justify-content, align-items, gap - вирівнювання елементів
-flex-direction: column - вертикальний напрямок
+## 💻 Technologies Used
+- **HTML5** – Semantic markup with sections, articles, and headings for accessibility
+- **CSS3** – Styling using Flexbox, CSS Grid, gradients, transitions, and responsive design
+- **Google Fonts** – Momo Trust Display font imported via link
+- **Responsive Design** – Media queries for different screen sizes
+- **Modern UI/UX Design** – Focus on aesthetic layout, hover effects, and clean typography
 
-CSS Grid
-display: grid - сітка
-grid-template-columns: 1fr 2fr - двовимірна сітка для розташування секцій (1:2)
-grid-template-columns: 1fr 1fr 1fr - тристовпцева сітка 
-grid-template-columns: 1fr 1fr - двостовпцева сітка
-grid-template-columns: 1fr - одностовпцева сітка
+## 📁 Folder Structure
+```
+portfolio/
+│
+├─ index.html          # Main HTML file
+├─ css/
+│  └─ style.css        # Main stylesheet
+├─ assets/             # Assets used in the website
+│  ├─ files/ 
+|  ├─ images/
+|  └─ video/
+└─ README.md           # Project description
+```
 
-Positioning
-position: fixed - фіксація певних елементів
-position: relative - позиція батьківських контейнерів
-position: absolute - позиція декоративних елементів
-z-index - контроль шарів
+## 📝 Notes
+- The portfolio is fully static (no backend integration).
+- Designed with modern web standards in mind, ensuring semantic structure and accessibility.
 
-Pseudo-elements
-.about_info::after { ... } - декоративний елемент на фоні
+---
 
-Pseudo-classes
-:hover - ефекти при наведенні
-:active - ефект натискання
-:focus - стилі для активних полів форми
-:checked - ефекти при відкритому або закритому checkbox
-::placeholder - стилі для placeholder
-
-Transitions & Transforms
-transition - плавні анімації
-transform - трансформації
-
-Box Shadow
-box-shadow - тіні для елементів
-
-Backdrop Filter
-backdrop-filter - розмиття фону
-
-
-Linear Gradient
-linear-gradient (...) - градієнтовий фон для елементів
-
-Smooth Scrolling
-scroll-behavior: smooth - плавний прокрут сторінки 
-scroll-margin-top: - прокрут на вказану дистанцію по верху
-
-Float
-float - обтікання елементів
-
-Responsive Design (Media Queries)
-@media screen and (min-width: 768px) and (max-width: 1023px) - стилізація для планшетів
-@media screen and (max-width: 767px) - стилізація для мобільних пристроїв
-@media screen and (max-width: 480px) - стилізація для маленьких телефонів
-
-Burger Menu (Checkbox Hack)
-.burger-toggle:checked ~ .nav, .burger-toggle:checked + .burger-menu span:nth-child(1) - мобільне меню через checkbox
-
-Aspect Ratio
-aspect-ratio: 3/4 - зберігає розміри зображення
-
-JavaScript
-
-onclick="window.open('URL')" - відкриття посилання у новій сторінці
-
+Created by **Nazarii Demchuk**
